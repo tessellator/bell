@@ -1,0 +1,8 @@
+{:paths ["src"]
+
+ :aliases
+ {:test
+  {:main-opts ["-m" "kaocha.runner"]
+   :extra-deps {lambdaisland/kaocha {:mvn/version "1.69.1069"}
+                ring/ring-mock {:mvn/version "0.4.0"}}
+   :extra-paths ["test"]}}}
