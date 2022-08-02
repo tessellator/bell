@@ -2,6 +2,8 @@
 
 A simple Clojure HTTP router. Zero dependencies. Zero macros.
 
+[![Clojars Project](https://img.shields.io/clojars/v/net.tessellator/bell.svg)](https://clojars.org/net.tessellator/bell)
+
 ## Why another HTTP router?
 
 There are plenty of good options for HTTP routers today. However, I felt that
