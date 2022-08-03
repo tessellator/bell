@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>net.tessellator</groupId>
   <artifactId>bell</artifactId>
-  <version>0.1.0</version>
+  <version>0.1.1</version>
   <name>bell</name>
   <description>A simple Clojure HTTP router</description>
   <licenses>
@@ -15,7 +15,7 @@
   <scm>
     <connection>scm:git:git://github.com/tessellator/bell.git</connection>
     <developerConnection>scm:git:ssh://git@github.com/tessellator/bell.git</developerConnection>
-    <tag>8acf8fb85052c605f04a5c7cdd68422ea4dac84b</tag>
+    <tag>c5e26113f7ef229b67eb4e77f9002d5c2168ddf3</tag>
     <url>https://github.com/tessellator/bell</url>
   </scm>
   <dependencies>
