@@ -50,7 +50,7 @@
 
                                      :else
                                      params))
-                                 path-params
+                                 (or path-params {})
                                  prefix-segs)]
       {:params params
        :segs (drop (count prefix-segs) segs)})))

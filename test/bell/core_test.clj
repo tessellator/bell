@@ -79,6 +79,11 @@
         req (mock/request :get "/api/person/1234")]
     (is (= "not found" (handler req)))))
 
+(deftest subrouter-no-params
+  (let [handler (bell/subrouter "/api/person"
+                                (bell/GET "/:id" :path-params))
+        req (mock/request :get "/api/person/1234")]
+    (is (= {:id "1234"} (handler req)))))
 
 ;; -----------------------------------------------------------------------------
 
