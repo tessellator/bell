@@ -167,7 +167,7 @@
   (wrap-segs
    (fn [request]
      (reduce (fn [_ route]
-               (when-let [resp (route request)]
+               (when-let [resp (and route (route request))]
                  (reduced resp)))
              nil
              routes))))

@@ -85,6 +85,12 @@
         req (mock/request :get "/api/person/1234")]
     (is (= {:id "1234"} (handler req)))))
 
+(deftest group-with-nil-route
+  (let [handler (bell/group nil
+                            (bell/GET "/health" (constantly "health")))
+        req (mock/request :get "/health")]
+    (is (= "health" (handler req)))))
+
 ;; -----------------------------------------------------------------------------
 
 (deftest helpers
