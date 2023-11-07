@@ -4,6 +4,7 @@ A simple Clojure HTTP router. Zero dependencies. Zero macros.
 
 [![Clojars Project](https://img.shields.io/clojars/v/net.tessellator/bell.svg)](https://clojars.org/net.tessellator/bell)
 [![cljdoc badge](https://cljdoc.org/badge/net.tessellator/bell)](https://cljdoc.org/d/net.tessellator/bell/CURRENT)
+[![bb compatible](https://raw.githubusercontent.com/babashka/babashka/master/logo/badge.svg)](https://babashka.org)
 
 ## Why another HTTP router?
 
