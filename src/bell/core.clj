@@ -2,6 +2,8 @@
   "Functions for creating routes for ring applications."
   (:require [clojure.string :as str]))
 
+(set! *warn-on-reflection* true)
+
 (def ^:private not-found
   (constantly {:status 404 :headers {} :body ""}))
 
@@ -26,7 +28,7 @@
                      (assoc params (keyword (subs seg 1)) (nth uri-segs idx))
 
                      (str/ends-with? seg "...")
-                     (if (str/starts-with? (nth uri-segs idx) (subs seg 0 (- (.length seg) 3)))
+                     (if (str/starts-with? (nth uri-segs idx) (subs seg 0 (- (count seg) 3)))
                        (reduced params)
                        (reduced nil))
 
@@ -83,7 +85,7 @@
   [method pattern handler]
   (let [route {:method (keyword (str/lower-case (name method)))
                :segs (segs pattern)
-               :prefix (boolean (or (and (> (.length pattern) 1)
+               :prefix (boolean (or (and (> (count pattern) 1)
                                          (str/ends-with? pattern "/"))
                                     (str/ends-with? pattern "...")))}]
     (wrap-segs
